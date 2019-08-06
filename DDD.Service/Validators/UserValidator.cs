@@ -14,20 +14,20 @@ namespace DDD.Service.Validators
                     .NotNull()
                     .OnAnyFailure(x =>
                     {
-                        throw new ArgumentNullException("Can't found the object.");
+                        throw new ArgumentNullException("Não encontrou objeto. [Nullo]");
                     });
 
             RuleFor(c => c.Cpf)
-                .NotEmpty().WithMessage("Is necessary to inform the CPF.")
-                .NotNull().WithMessage("Is necessary to inform the CPF.");
+                .NotEmpty().WithMessage("Necessário informar o CPF.")
+                .NotNull().WithMessage("Necessário informar o CPF.");
 
             RuleFor(c => c.BirthDate)
-                .NotEmpty().WithMessage("Is necessary to inform the birth date.")
-                .NotNull().WithMessage("Is necessary to inform the birth date.");
+                .NotEmpty().WithMessage("Necessário informar a data nascimento.")
+                .NotNull().WithMessage("Necessário informar a data nascimento.");
 
             RuleFor(c => c.Name)
-                .NotEmpty().WithMessage("Is necessary to inform the name.")
-                .NotNull().WithMessage("Is necessary to inform the birth date.");
+                .NotEmpty().WithMessage("Necessário informar o nome.")
+                .NotNull().WithMessage("Necessário informar o nome");
         }
     }
 }

@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using DDD.Domain.Entities;
 using DDD.Service.Services;
 using DDD.Service.Validators;
@@ -10,16 +13,16 @@ namespace DDD.Application.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class ProdutoController : ControllerBase
     {
-        private BaseService<User> service = new BaseService<User>();
+        private BaseService<Produto> service = new BaseService<Produto>();
 
         [HttpPost]
-        public IActionResult Post([FromBody] User item)
+        public IActionResult Post([FromBody] Produto item)
         {
             try
             {
-                service.Post<UserValidator>(item);
+                service.Post<ProdutoValidator>(item);
 
                 return new ObjectResult(item.Id);
             }
@@ -34,11 +37,11 @@ namespace DDD.Application.Controllers
         }
 
         [HttpPut]
-        public IActionResult Put([FromBody] User item)
+        public IActionResult Put([FromBody] Produto item)
         {
             try
             {
-                service.Put<UserValidator>(item);
+                service.Put<ProdutoValidator>(item);
 
                 return new ObjectResult(item);
             }
@@ -89,7 +92,8 @@ namespace DDD.Application.Controllers
         {
             try
             {
-                return new ObjectResult(service.Get(id));
+                var retorno = new ObjectResult(service.Get(id));
+                return retorno;
             }
             catch (ArgumentException ex)
             {

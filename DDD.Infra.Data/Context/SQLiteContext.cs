@@ -1,15 +1,13 @@
 ﻿using DDD.Domain.Entities;
 using DDD.Infra.Data.Mapping;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DDD.Infra.Data.Context
 {
     public class SQLiteContext : DbContext
     {
         public DbSet<User> User { get; set; }
+        public DbSet<Produto> Produto { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -23,6 +21,7 @@ namespace DDD.Infra.Data.Context
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<User>(new UserMap().Configure);
+            modelBuilder.Entity<Produto>(new ProdutoMap().Configure);
         }
     }
 }
