@@ -8,6 +8,7 @@ namespace DDD.Infra.Data.Context
     {
         public DbSet<User> User { get; set; }
         public DbSet<Produto> Produto { get; set; }
+        public DbSet<ContaCorrente> ContaCorrente { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -22,6 +23,7 @@ namespace DDD.Infra.Data.Context
 
             modelBuilder.Entity<User>(new UserMap().Configure);
             modelBuilder.Entity<Produto>(new ProdutoMap().Configure);
+            modelBuilder.Entity<ContaCorrente>(new ContaCorrenteMap().Configure);
         }
     }
 }

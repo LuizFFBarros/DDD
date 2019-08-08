@@ -22,13 +22,6 @@ namespace DDD.Tests
             pdt.Preco = preco;
             pdt.Fabricante = fabricante;
 
-            // Se houver erro em validações, deve dar erro ao adicionar no banco.
-            //if (preco < 0 || name.Length < 1 || sku.Length < 1 || codigo.Length < 1)
-            //{
-            //    Assert.Throws<FluentValidation.ValidationException>(() => service.Post<ProdutoValidator>(pdt));
-            //    return;
-            //}
-            // Agora criando, resgatando, comparando e deletando.
             service.Post<ProdutoValidator>(pdt);
             Assert.True(pdt.Id > -1);
             var pdt2 = service.Get(pdt.Id);
@@ -51,13 +44,6 @@ namespace DDD.Tests
             pdt.Preco = preco;
             pdt.Fabricante = fabricante;
 
-            // Se houver erro em validações, deve dar erro ao adicionar no banco.
-            //if (preco < 0 || name.Length < 1 || sku.Length < 1 || codigo.Length < 1)
-            //{
-            //    Assert.Throws<FluentValidation.ValidationException>(() => service.Post<ProdutoValidator>(pdt));
-            //    return;
-            //}
-            // Agora criando, resgatando, comparando e deletando.
             service.Post<ProdutoValidator>(pdt);
             Assert.True(pdt.Id > -1);
             var pdt2 = service.Get(pdt.Id);
