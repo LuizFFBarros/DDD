@@ -33,7 +33,7 @@ namespace DDD.Service.Validators
                 .WithMessage("Preço não pode ser nullo");
                 
             RuleFor(a => a.Preco)
-                .LessThanOrEqualTo(0)
+                .GreaterThan(0)
                 .WithMessage("Preço tem que ser maior que 0");
         }
     }

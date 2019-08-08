@@ -5,11 +5,13 @@ VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDD.Application", "DDD.Application\DDD.Application.csproj", "{B5C640A0-2AEA-42C8-B22B-B78B2C797AAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.Domain", "DDD.Domain\DDD.Domain.csproj", "{B465EB93-D5AF-4072-A058-8695DB59DE87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDD.Domain", "DDD.Domain\DDD.Domain.csproj", "{B465EB93-D5AF-4072-A058-8695DB59DE87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.Infra.Data", "DDD.Infra.Data\DDD.Infra.Data.csproj", "{3219AC8C-3B39-4AFE-962E-03903F0B30DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDD.Infra.Data", "DDD.Infra.Data\DDD.Infra.Data.csproj", "{3219AC8C-3B39-4AFE-962E-03903F0B30DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.Service", "DDD.Service\DDD.Service.csproj", "{CA3B9CE8-1786-44EA-A4BE-DFDC96027005}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDD.Service", "DDD.Service\DDD.Service.csproj", "{CA3B9CE8-1786-44EA-A4BE-DFDC96027005}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.Tests", "DDD.Tests\DDD.Tests.csproj", "{385537F4-DD20-45A3-A67A-13A8054070AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{CA3B9CE8-1786-44EA-A4BE-DFDC96027005}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA3B9CE8-1786-44EA-A4BE-DFDC96027005}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA3B9CE8-1786-44EA-A4BE-DFDC96027005}.Release|Any CPU.Build.0 = Release|Any CPU
+		{385537F4-DD20-45A3-A67A-13A8054070AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{385537F4-DD20-45A3-A67A-13A8054070AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{385537F4-DD20-45A3-A67A-13A8054070AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{385537F4-DD20-45A3-A67A-13A8054070AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
